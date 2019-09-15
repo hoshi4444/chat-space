@@ -1,45 +1,30 @@
-.flash-box
- .noteice グループを作成しました。
+-# .flash-box
+-#  .noteice
+.wrapper
+ = render 'shared/side_bar'
+ 
+ .mein-content
+  .header
+   .header__title
+    %h2.header__title__current-group title
+    %ul.header__title__menber-list
+     %li Menber：
+     %li aiueo
+   .header__right-box
+    %p Edit
+  .messages
+   .message
+    .message__upper-info
+     %p.message__upper-info__talker user
+     %p.message__upper-info__date 2019/09/14(Sat) 15:32:30
+    %p.message__text text
 
-.side-content 
- .side-header
-  .side-header__box
-   %p user
-   %ul.side-header__box__menu
-    %li.side-header__box__menu__new-group
-     =link_to do
-      = fa_icon 'edit'
-    %li.side-header__box__menu__new-group
-     =link_to edit_user_path(current_user) do
-      = fa_icon 'cog'
- .sideber
-  .sideber__box
-   %p.sideber__box-name name
-   %p.sideber__box-message text
 
-
-.mein-content
- .header
-  .header__title
-   %h2.header__title__current-group title
-   %ul.header__title__menber-list
-    %li Menber：
-    %li aiueo 
-  .header__right-box
-   %p Edit
- .messages
-  .message
-   .message__upper-info
-    %p.message__upper-info__talker user
-    %p.message__upper-info__date 2019/09/14(Sat) 15:32:30
-   %p.message__text text
-   
-
- .form
-  %form.new-message
-   .input-box
-    %input.input-box__text{placeholder:'type a message'} 
-    %label.input-box__image
-     = fa_icon 'image'
-     %input.input-box__image__file{type:'file'}
-   %input.submit-btn{value:'Send'} 
+  .form
+   %form.new-message
+    .input-box
+     %input.input-box__text{placeholder:'type a message'}
+     %label.input-box__image
+      = fa_icon 'image'
+      %input.input-box__image__file{type:'file'}
+    %input.submit-btn{value:'Send'}
