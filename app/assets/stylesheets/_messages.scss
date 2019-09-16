@@ -92,6 +92,9 @@ a {
    font-size: 12px;
    color: $dataFontcolor;
    }
+   li+li {
+    margin-left: 0.3rem;
+   }
   }
   &__right-box {
   height:40px;
@@ -140,29 +143,29 @@ a {
   height:90px;
   padding: 20px 40px;
   background-color: #ddd;
-  .new-message {
-   display:flex;
+  form {
+    display: flex;
     .input-box {
-      position: relative;
-      width: 100%;
-    &__text{
-    background-color: $meinBackcolor;
-    height: 50px;
-    width: 100%;
-    padding: 0 40px 0 10px;
-    color:#434a54;
-    border-style:none;
-    }
-    &__image {
-    font-size: 1.3rem;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
+       position: relative;
+       width: 100%;
+     &__text{
+     background-color: $meinBackcolor;
+     height: 50px;
+     width: 100%;
+     padding: 0 40px 0 10px;
+     color:#434a54;
+     border-style:none;
+     }
+     &__image {
+     font-size: 1.3rem;
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     cursor: pointer;
      &__file {
      display: none;
      }
-    }
+     }
     }
     .submit-btn {
     width: 100px;
