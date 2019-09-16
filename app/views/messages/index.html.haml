@@ -1,15 +1,16 @@
--# .flash-box
--#  .noteice
 .wrapper
  = render 'shared/side_bar'
  
  .mein-content
   .header
    .header__title
-    %h2.header__title__current-group title
+    .header__title__current-group 
+     = @group.name
     %ul.header__title__menber-list
-     %li Menber：
-     %li aiueo
+     Menber：
+     - @group.users.each do |user|
+      %li= user.name
+     
    .header__right-box
     %p Edit
   .messages
@@ -23,12 +24,3 @@
       = fa_icon 'picture-o'
       = f.file_field :image, class: 'input-box__image__file'
     = f.submit 'Send', class: 'submit-btn'
-  
-  -# .form
-  -#  %form.new-message
-  -#   .input-box
-  -#    %input.input-box__text{placeholder:'type a message'}
-  -#    %label.input-box__image
-  -#     = fa_icon 'image'
-  -#     %input.input-box__image__file{type:'file'}
-  -#   %input.submit-btn{value:'Send'}
