@@ -13,11 +13,7 @@
    .header__right-box
     %p Edit
   .messages
-   .message
-    .message__upper-info
-     %p.message__upper-info__talker user
-     %p.message__upper-info__date 2019/09/14(Sat) 15:32:30
-    %p.message__text text
+   = render @messages
 
   .form
    = form_for [@group, @message] do |f|
