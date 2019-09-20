@@ -35,8 +35,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data)
       $('.messages').append(html).animate({scrollTop:$('.messages')[0].scrollHeight},'fast');
-      $('.input-box__text').val('')
-      $('.input-box__image__file').val('')
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('error');
