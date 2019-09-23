@@ -1,19 +1,20 @@
 .side-content 
- .side-header
-  .side-header__box
-   = current_user.name
-   %ul.side-header__box__menu
-    %li.side-header__box__menu__new-group
-     =link_to new_group_path do
-      = fa_icon 'edit'
-    %li.side-header__box__menu__new-group
-     =link_to edit_user_path(current_user) do
-      = fa_icon 'cog'
- .sideber
-  - current_user.groups.each do |group|
-   = link_to group_messages_path(group) do
-    .sideber__box    
-     .sideber__box-name 
-      = group.name
-     .sideber__box-message
-      = group.show_last_message
+  .side-header
+    .side-header__box
+      = current_user.name
+    %ul.side-header__box__menu
+      %li.side-header__box__menu__new-group
+        =link_to new_group_path,data: {"turbolinks":false} do
+          = fa_icon 'pencil-square-o', class: 'icon'
+      %li.side-header__box__menu__new-group
+        =link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
+
+  .sideber
+    - current_user.groups.each do |group|
+      .sideber__box
+        = link_to group_messages_path(group) do
+          .sideber__box-name 
+            = group.name
+          .sideber__box-message
+            = group.show_last_message
