@@ -9,10 +9,11 @@
     %ul.header__title__menber-list
      Menber：
      - @group.users.each do |user|
-      %li= user.name
-     
-   .header__right-box
-    %p Edit
+      %li.header__title__menber-list__member= user.name
+
+   =link_to edit_group_path(@group),data: {"turbolinks":false} do
+    .header__right-box Edit
+  
   .messages
    = render @messages
 

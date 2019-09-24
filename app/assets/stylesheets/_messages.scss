@@ -43,14 +43,14 @@ a {
    &__menu {
    display: flex;
    }
-   li {
-    margin-left: 0.3rem;
+   &__menu li {
+   margin-left: 0.3rem;
    }
   }
 }
 
 .sideber {
-  padding:20px;
+  padding:20px 20px 0;
   background-color: #2f3e51;
   height:calc(100vh - 100px);
   overflow: scroll;
