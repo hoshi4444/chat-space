@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1' 
   }
 
-  config.fog_directory  = 'hoshi4444'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/hoshi4444'
+  config.fog_directory  = 'hoshichat'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/hoshichat'
 end
