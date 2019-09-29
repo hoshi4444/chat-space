@@ -20,8 +20,8 @@ $(document).on('turbolinks:load',function() {
       add_list.append(html);
   }
 
-  $("#user-search-field").on("keyup", function() {
-    var input = $("#user-search-field").val();
+  $(".chat-group-form__input").on("keyup", function() {
+    var input = $(".chat-group-form__input#user-search-field").val();
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -30,6 +30,7 @@ $(document).on('turbolinks:load',function() {
     })
 
     .done(function(user) {
+      $("#user-search-result").empty();
       if (user.length !== 0) {
       user.forEach(function(user){
         appendUser(user);
